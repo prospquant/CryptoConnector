@@ -3,7 +3,7 @@ Example of BinanceFutures exchange wrapper
 
 The BinanceFuturesClientConnector class is a part of a trading automation system that provides a connection to the Binance Futures exchange. This connector wraps the necessary functionalities of the Binance Futures API, allowing for easier interaction and extraction of data.
 
-Overview
+```Overview```
 This connector class inherits from the AbstractConnector and provides a set of functionalities that are specific to the Binance Futures exchange, including:
 
 Initialization: Setting up essential configurations such as endpoints, converters, parameter builders, and more.
@@ -14,7 +14,7 @@ REST Private Data: Setting leverage and fetching balances for a specific account
 
 Socket Private Data: Real-time data subscriptions to positions and account balances.
 
-Features
+```Features```
 
 Multiple Constructors: The class provides two constructors to allow for initialization with just a connector name or with API keys as well.
 
@@ -30,12 +30,12 @@ Real-time Position Subscription: Subscribe or unsubscribe to real-time position 
 
 How to Use
 
-Initialization:
+```Initialization:```
 
 Use one of the constructors to initialize the connector.
 Example: var connector = new BinanceFuturesClientConnector("myConnectorName", "myApiKey", "mySecretKey");
 
-Fetching Public Data:
+```Fetching Public Data:```
 
 Server Time: await connector.GetServerTimeAsync();
 
@@ -45,11 +45,11 @@ Active Trading Pairs: await connector.GetActiveSymbolsAsync();
 
 Ticker for a Pair: await connector.GetTickerAsync("BTCUSDT");
 
-Fetching & Manipulating Private Data:
+```Fetching & Manipulating Private Data:```
 
 Get Account Balance: await connector.GetBalanceAsync();
 
-Socket Subscription:
+```Socket Subscription:```
 
 Subscribe to Position Updates: connector.SubscribeToPosition();
 
